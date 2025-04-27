@@ -8,6 +8,7 @@
 int main() {
   struct Node {
     int element;
+    struct Node *next;
   };
   return 0;
 }
