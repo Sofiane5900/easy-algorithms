@@ -1,6 +1,6 @@
 ---
 title: 'Selection Sort'
-date: '07-05-2025'
+date: '05-07-2025'
 image:
     url: '/images/selection-sort.webp'
     alt: 'Sort a list by repeatedly selecting the smallest element.'

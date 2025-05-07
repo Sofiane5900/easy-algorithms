@@ -1,6 +1,6 @@
 ---
 title: 'Linked-List'
-date: '26-04-2025'
+date: '04-26-2025'
 image:
     url: '/images/linked-list.webp'
     alt: 'A collection of nodes, where each one points to the next.'
