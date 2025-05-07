@@ -3,8 +3,10 @@
 > **Personal reinterpretation of algorithms from _"Grokking Algorithms"_**
 
 <div align="center">
+
+  ## Implemented in  
   
-  ![Skills](https://skillicons.dev/icons?i=c,vim,git)
+  ![Skills](https://skillicons.dev/icons?i=c)
   
   [![Status](https://img.shields.io/badge/status-in_progress-yellow.svg)](https://github.com/yourusername/easy-algorithms)
 </div>
@@ -14,17 +16,7 @@
 This repository is a personal project where I recreate and reinterpret algorithms from the book *"Grokking Algorithms"* by Aditya Bhargava.  
 The goal is not just to reproduce, but also to internalize and visually express the logic behind each algorithm.
 
-## 🚀 Implemented Algorithms
-
-Here's what you'll find in this repository:
-
-- 📊 **Array Operations** - Basic array manipulations and operations
-- 🔍 **Binary Search** - Efficient searching in sorted arrays
-- 🔗 **Linked Lists** - Implementation and operations
-- 🔄 **Selection Sort** - Simple sorting algorithm
-- 🔁 **Swap Operations** - Basic building block for many algorithms
-
-## 🛠️ Project Structure
+## 🛠️ Implemented AlgorithmsProject Structure
 
 ```
 easy-algorithms/
@@ -37,7 +29,7 @@ easy-algorithms/
 
 Each directory contains a complete implementation with:
 - Source code in C
-- Detailed comments explaining the logic
+- Comments explaining the logic
 - Example usage
 
 ## 📖 Reference
@@ -65,7 +57,3 @@ While this is a personal learning project, observations and suggestions are welc
 - Open issues for questions or suggestions
 - Propose improvements through pull requests
 - Share your own interpretations of these algorithms
-
-## 📄 License
-
-This project is open-sourced under the MIT License.
