@@ -1,0 +1,84 @@
+---
+interface Props {
+    url: string;
+    title: string;
+    pubDate: string;
+    description: string;
+    thumbnail?: string;
+    imageUrl: string;
+}
+
+const { url, title, pubDate, description, thumbnail, imageUrl } = Astro.props;
+const displayImage = thumbnail || imageUrl;
+---
+
+<li class="card">
+    <a class="card__link" href={url}>
+        <div class="card__thumbnail">
+            <img src={displayImage} alt={description} width="400" height="200" loading="lazy" decoding="async">
+        </div>
+        <div class="card__content">
+            <h3 class="card__title">
+                {title}
+            </h3>
+            <p class="card__description">{description}</p>
+            <p class="card__date">{pubDate}</p>
+        </div>
+    </a>
+</li>
+
+<style>
+    .card {
+        list-style: none;
+        padding: 0;
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+        overflow: hidden;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+    }
+
+    .card__link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card__thumbnail {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .card__thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card__content {
+        padding: 1.5rem;
+    }
+
+    .card__title {
+        margin: 0;
+        font-size: 1.2rem;
+        color: var(--text);
+    }
+
+    .card__description {
+        margin: 0.5rem 0;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+
+    .card__date {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+    }
+</style>

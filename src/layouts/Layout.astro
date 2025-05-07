@@ -1,0 +1,51 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Easy Algorithms - Simplifying algorithms and data structures, explained in a clear and visual way">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/easy-algorithms/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" as="style">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Easy Algorithms</title>
+	</head>
+	<body>
+		<Header />
+		<main>
+            <slot />
+            <Footer />
+        </main>
+        <script>
+            function colorMode() {
+                if (
+                    localStorage.theme === "light" ||
+                    (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: light)").matches)
+                ) {
+                    document.documentElement.classList.add("light");
+                } else {
+                    document.documentElement.classList.remove("light");
+                }
+              }
+            
+            colorMode();
+            document.addEventListener('astro:after-swap', colorMode);
+        </script>
+	</body>
+</html>
+

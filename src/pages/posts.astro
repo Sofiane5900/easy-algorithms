@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardPost from '../components/CardPost.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+// Sort posts from newest to oldest
+const sortedPosts = posts.sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<Layout title="Articles">
+	<section class="blog-posts">
+		<h1>All Articles</h1>
+		<p class="subtitle">Discover my collection of simply explained algorithms</p>
+		
+		<div class="posts-grid">
+			{
+				sortedPosts.map((post) => (
+					<CardPost
+						url={`/posts/${post.id}`}
+						title={post.data.title}
+						pubDate={post.data.date}
+						description={post.data.image.alt}
+						thumbnail={post.data.image.thumbnail}
+						imageUrl={post.data.image.url}
+					/>
+				))
+			}
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.blog-posts {
+		margin: 2rem auto;
+		padding: 1rem;
+		max-width: 800px;
+	}
+
+	.subtitle {
+		text-align: center;
+		margin-bottom: 3rem;
+		font-size: 1.2rem;
+		color: var(--text-muted);
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.posts-grid {
+		display: grid;
+		gap: 2rem;
+	}
+
+	@media (min-width: 768px) {
+		.posts-grid {
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		}
+	}
+</style>

@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+const sortedPosts = posts.sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+const latestPosts = sortedPosts.slice(0, 3);
+---
+
+<Layout title="easy-algorithms">
+	<main>
+		<section class="intro">
+			<h1>Welcome to easy-algorithms</h1>
+			<p class="intro-text">
+				<strong>easy-algorithms</strong> is a project dedicated to making algorithms and data structures <strong>easier to understand</strong>.
+			</p>
+			<p class="intro-description">
+				Here, you'll find clear and simple explanations of classic algorithms and fundamental data structures, 
+				illustrated with code written mostly in <strong>C language</strong>.
+			</p>
+			<div class="github-hero">
+				<a href="https://github.com/Sofiane5900/easy-algorithms" target="_blank" class="github-button">
+					Preview the code on GitHub
+				</a>
+			</div>
+		</section>
+
+		<section class="features">
+			<h2>What's inside?</h2>
+			<div class="features-grid">
+				<div class="feature-card">
+					<h3>📚 Simplified explanations</h3>
+					<p>Clear breakdowns of algorithms and data structures</p>
+				</div>
+				<div class="feature-card">
+					<h3>💻 Code examples</h3>
+					<p>Written in C for clarity and minimal abstraction</p>
+				</div>
+				<div class="feature-card">
+					<h3>🎯 Focus on logic</h3>
+					<p>Emphasis on visualization and understanding, not mechanical coding</p>
+				</div>
+				<div class="feature-card">
+					<h3>🧠 Personal insights</h3>
+					<p>Complex ideas reinterpreted for easier understanding</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="why-section">
+			<h2>Why this project?</h2>
+			<p>
+				While building this project, I wanted to <strong>solidify my own understanding</strong> of algorithms 
+				by <strong>re-explaining them in my own words</strong> — but I also hope it can be <strong>a helpful 
+				companion for others</strong> who are learning, revising, or simply curious about how things work at a 
+				deeper level.
+			</p>
+			<p>
+				If it can make a difficult concept feel simpler for just one person, then the project is already a success.
+			</p>
+		</section>
+
+		<section class="latest-posts">
+			<h2>Latest Articles</h2>
+			<ul role="list" class="link-card-grid">
+				{
+					latestPosts.map((post) => (
+						<Card
+							href={`/posts/${post.id}`}
+							title={post.data.title}
+							body={post.data.image.alt}
+						/>
+					))
+				}
+			</ul>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: 800px;
+		color: var(--text-regular);
+	}
+	.intro {
+		margin: 4rem 0;
+		text-align: center;
+	}
+	.intro-text {
+		font-size: 1.5rem;
+		line-height: 1.6;
+		margin: 1rem auto;
+		max-width: 640px;
+	}
+	.intro-description {
+		font-size: 1.2rem;
+		line-height: 1.6;
+		margin: 1rem auto;
+		max-width: 640px;
+		color: var(--text-muted);
+	}
+	.github-hero {
+		margin-top: 1.5rem;
+		text-align: center;
+	}
+	.github-button {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.5rem 1rem;
+		background-color: var(--accent-primary);
+		color: white;
+		border-radius: 4px;
+		text-decoration: none;
+		font-family: var(--body);
+		font-size: 1rem;
+		transition: background-color 0.2s ease;
+	}
+	.github-button:hover {
+		background-color: var(--accent-secondary);
+	}
+	.github-icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 0.5rem;
+	}
+	.features {
+		margin: 4rem 0;
+	}
+	.features h2 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	.feature-card {
+		padding: 1.5rem;
+		border-radius: 8px;
+		background: var(--card-bg);
+		border: 1px solid var(--border);
+	}
+	.feature-card h3 {
+		margin: 0 0 1rem 0;
+		font-size: 1.2rem;
+	}
+	.feature-card p {
+		margin: 0;
+		color: var(--text-muted);
+	}
+	.why-section {
+		margin: 4rem 0;
+		padding: 2rem;
+		background: var(--card-bg);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+	}
+	.why-section h2 {
+		margin-top: 0;
+	}
+	.latest-posts {
+		margin: 4rem 0;
+	}
+	.latest-posts h2 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+	.github-link {
+		margin-top: 1.5rem;
+		text-align: center;
+		font-size: 1.1rem;
+	}
+	.github-link a {
+		color: var(--accent-primary);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	.github-link a:hover {
+		color: var(--accent-secondary);
+		text-decoration: underline;
+	}
+
+	@media (max-width: 600px) {
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+

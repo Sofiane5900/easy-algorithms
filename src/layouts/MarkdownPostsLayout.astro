@@ -1,0 +1,34 @@
+---
+import BaseLayout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+    <h2 style="text-align: left;">{frontmatter.title}</h2>
+    <ul class="badge__list">
+        {frontmatter.author && (
+            <li>
+                <span class="badge badge--item">AUTHOR</span>{frontmatter.author}
+            </li>
+        )}
+        <li>
+            <span class="badge badge--item">PUBLISHED</span>{frontmatter.date}
+        </li>
+    </ul>
+    <slot />
+</BaseLayout>
+
+<style>
+    .post-image {
+        margin: 2rem 0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .post-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+</style>
