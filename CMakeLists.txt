@@ -7,4 +7,5 @@ add_executable(easy_algorithms
         linked-list/linked_list.c
         binary-search/binary_search.c
         array/array.c
-        swap/swap.c)
+        swap/swap.c
+        selection-sort/selection-sort.c)
