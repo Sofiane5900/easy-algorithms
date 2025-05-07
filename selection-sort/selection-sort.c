@@ -8,12 +8,12 @@
 int main() {
   int numbers[] = {20, 55, 3, 8, 9, 101};
   int lowestNumber = numbers[0];
+  int minIndex = 0;
   size_t count = sizeof(numbers) / sizeof(numbers[0]);
 
-  for (int i = 0; i < count; i++) {
-    if (lowestNumber > numbers[i]) {
-      lowestNumber = numbers[i];
-      printf("%d\n", lowestNumber);
+  for (int i = 1; i < count; i++) {
+    if (numbers[minIndex] > numbers[i]) {
+      minIndex = i;
     }
   }
 }
