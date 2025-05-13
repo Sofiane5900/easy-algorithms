@@ -8,4 +8,5 @@ add_executable(easy_algorithms
         binary-search/binary_search.c
         array/array.c
         swap/swap.c
-        selection-sort/selection-sort.c)
+        selection-sort/selection-sort.c
+        stack/stack.c)
