@@ -13,19 +13,8 @@
 
 ## 📝 Overview
 
-This repository is a personal project where I recreate and reinterpret algorithms from the book *"Grokking Algorithms"* by Aditya Bhargava.  
-The goal is not just to reproduce, but also to internalize and visually express the logic behind each algorithm.
+This repo contains my implementations while reading through Grokking Algorithms. Each file represents my understanding of the concepts, implemented in my own way.
 
-## 🛠️ Implemented AlgorithmsProject Structure
-
-```
-easy-algorithms/
-├── array/
-├── binary-search/
-├── linked-list/
-├── selection-sort/
-└── swap/
-```
 
 Each directory contains a complete implementation with:
 - Source code in C
@@ -45,11 +34,21 @@ All algorithms are inspired by the book:
 
 I highly recommend this book if you want a clear and visual introduction to algorithms.
 
-## ✍️ Notes
+Each implementation includes:
+- The core algorithm logic
+- My own comments explaining the thought process
+- Simple example usage
 
-- Every implementation reflects my personal understanding and way of visualizing the problems
-- Code structure, comments, and choices may differ from the book to match my own learning process
-- This project is mainly for educational and personal development purposes
+## About
+
+Based on **"Grokking Algorithms"** by Aditya Bhargava - an excellent book that explains algorithms visually.
+
+My implementations might differ from the book since I:
+- Write code in my own style
+- Add personal notes about what I learned
+- Sometimes try different approaches
+
+Feel free to explore the code or use it for your own learning.
 
 ## 🤝 Contributing
 
