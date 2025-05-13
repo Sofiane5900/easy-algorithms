@@ -1,18 +1,35 @@
-# easy-algorithms
+# Easy Algorithms
 
-> **Personal reinterpretation of algorithms from _"Grokking Algorithms"_**  
+> My implementation of algorithms from _"Grokking Algorithms"_ in C
 
-This repository is a personal project where I recreate and reinterpret algorithms from the book *"Grokking Algorithms"* by Aditya Bhargava.  
-The goal is not just to reproduce, but also to internalize and visually express the logic behind each algorithm.
+This repo contains my implementations while reading through Grokking Algorithms. Each file represents my understanding of the concepts, implemented in my own way.
 
-## 📖 Reference
+## Current Implementations
 
-All algorithms are inspired by the book:  
-**_"Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People"_ by Aditya Bhargava.**  
-I highly recommend this book if you want a clear and visual introduction to algorithms.
+```c
+binary_search.c    // Find elements efficiently in sorted arrays (divide & conquer)
+linked_list.c      // Dynamic data structure for flexible storage
+array.c           // Basic array operations and traversal methods
+selection-sort.c  // Sort arrays by repeatedly finding the minimum element
+swap.c           // Basic value swapping (used in various sorting algorithms)
+```
 
-## ✍️ Notes
+Each implementation includes:
+- The core algorithm logic
+- My own comments explaining the thought process
+- Simple example usage
 
-- Every implementation reflects my personal understanding and way of visualizing the problems.
-- Code structure, comments, and choices may differ from the book to match my own learning process.
-- This project is mainly for educational and personal development purposes.
+## About
+
+Based on **"Grokking Algorithms"** by Aditya Bhargava - an excellent book that explains algorithms visually.
+
+My implementations might differ from the book since I:
+- Write code in my own style
+- Add personal notes about what I learned
+- Sometimes try different approaches
+
+Feel free to explore the code or use it for your own learning.
+
+## License
+
+MIT
