@@ -6,7 +6,7 @@
 
   ## Implemented in  
   
-  ![Skills](https://skillicons.dev/icons?i=c)
+  ![Skills](https://skillicons.dev/icons?i=c,cs)
   
   [![Status](https://img.shields.io/badge/status-in_progress-yellow.svg)](https://github.com/yourusername/easy-algorithms)
 </div>
