@@ -1,0 +1,15 @@
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/bin/Debug/net9.0/csharp
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/bin/Debug/net9.0/csharp.deps.json
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/bin/Debug/net9.0/csharp.runtimeconfig.json
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/bin/Debug/net9.0/csharp.dll
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/bin/Debug/net9.0/csharp.pdb
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.AssemblyInfoInputs.cache
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.AssemblyInfo.cs
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.csproj.CoreCompileInputs.cache
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.sourcelink.json
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.dll
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/refint/csharp.dll
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.pdb
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/csharp.genruntimeconfig.cache
+/Users/sofiane/CLionProjects/easy-algorithms/csharp/obj/Debug/net9.0/ref/csharp.dll
