@@ -19,7 +19,16 @@ public class hashmap
        {
            buckets[index] = new List<KeyValuePair<string, int>>();
        }
-       buckets[index].Add(new KeyValuePair<string, int>(element,hashcode));
+
+       bool keyExists = buckets[index].Any(pair => pair.Key == element);
+       if (!keyExists)
+       {
+           buckets[index].Add(new KeyValuePair<string, int>(element, hashcode));
+       }
+       else
+       {
+           Console.Write("Key already exists !");
+       }
     }
     
     
