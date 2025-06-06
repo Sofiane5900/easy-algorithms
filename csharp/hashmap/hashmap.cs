@@ -15,6 +15,7 @@ public class hashmap
        int hashcode =  element.GetHashCode();
        Console.WriteLine(hashcode);
        var elementToAdd = new KeyValuePair<string, int>(element, hashcode);
+       int index = Math.Abs(hashcode) % buckets.Length;
 
     }
     
