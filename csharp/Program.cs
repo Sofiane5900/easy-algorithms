@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using csharp.hashmap;
 using csharp.quicksort;
 
 Console.WriteLine("Hello, World!");
@@ -10,3 +11,4 @@ foreach (int i in test)
 {
     Console.WriteLine(i + " ");
 }
+

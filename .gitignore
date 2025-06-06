@@ -189,3 +189,7 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+
+# .NET build artifacts
+bin/
+obj/
