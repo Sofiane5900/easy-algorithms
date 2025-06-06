@@ -14,12 +14,12 @@ public class hashmap
     {
        int hashcode =  element.GetHashCode();
        Console.WriteLine(hashcode);
-       var elementToAdd = new KeyValuePair<string, int>(element, hashcode);
        int index = Math.Abs(hashcode) % buckets.Length;
        if (buckets[index] == null)
        {
            buckets[index] = new List<KeyValuePair<string, int>>();
        }
+       buckets[index].Add(new KeyValuePair<string, int>(element,hashcode));
     }
     
     
