@@ -9,4 +9,5 @@ add_executable(easy_algorithms
         array/array.c
         swap/swap.c
         selection-sort/selection-sort.c
-        stack/stack.c)
+        stack/stack.c
+        graph/graph.c)
