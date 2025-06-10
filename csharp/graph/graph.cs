@@ -1,8 +1,7 @@
 namespace csharp.graph;
 
-public class graph
+public class Graph
 {
-    // faire une list de nodes 
 }
 
 public class Node
