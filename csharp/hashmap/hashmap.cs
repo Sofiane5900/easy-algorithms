@@ -15,6 +15,7 @@ public class hashmap
        int hashcode =  element.GetHashCode();
        Console.WriteLine(hashcode);
        int index = Math.Abs(hashcode) % buckets.Length;
+       
        if (buckets[index] == null)
        {
            buckets[index] = new List<KeyValuePair<string, int>>();
