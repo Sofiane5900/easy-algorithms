@@ -31,6 +31,14 @@ public class Dijkstra
             }
             if (current == null) break;
 
-           
+            foreach (var edge in current.Neighbors )
+            {
+                var neighbor = edge.Target;
+                int alt = distances[neighbor] + edge.Kilometer;
+                if (alt < distances[neighbor])
+                {
+                    distances[neighbor] = alt;
+                 }
+            }
     }
 }
