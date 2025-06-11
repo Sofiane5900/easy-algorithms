@@ -19,5 +19,18 @@ public class Dijkstra
         distances[start] = 0;
         Node current = null;
         int minDistance = int.MaxValue;
-  
+        while (unvisited.Count > 0)
+        {
+            foreach (var node in unvisited )
+            {
+                if (distances[node] < minDistance)
+                {
+                    minDistance = distances[node];
+                    current = node;
+                }
+            }
+            if (current == null) break;
+
+           
+    }
 }
