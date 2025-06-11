@@ -15,8 +15,7 @@ public class Dijkstra
         }
 
         distances[start] = 0;
-        Node current = null;
-        int minDistance = int.MaxValue;
+       
         while (unvisited.Count > 0)
         {
             foreach (var node in unvisited)
@@ -34,7 +33,7 @@ public class Dijkstra
             foreach (var edge in current.Neighbors)
             {
                 var neighbor = edge.Target;
-                int alt = distances[neighbor] + edge.Kilometer;
+                int alt = distances[current] + edge.Kilometer;
                 if (alt < distances[neighbor])
                 {
                     distances[neighbor] = alt;
