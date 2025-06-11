@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace csharp.hashmap;
 
-public class hashmap
+public class Hashmap
 {
     // on a besoin d'une liste sur quoi stocker nos indices & élements, 
     // on a besoin d'une méthode qui va placer les élements avec une clé en tant qu'indice
@@ -10,7 +10,7 @@ public class hashmap
     private static List<KeyValuePair<string, int>>[] buckets = new List<KeyValuePair<string, int>>[10];
 
 
-    public static void Hashmap(string element)
+    public static void HashMap(string element)
     {
        int hashcode =  element.GetHashCode();
        Console.WriteLine(hashcode);
