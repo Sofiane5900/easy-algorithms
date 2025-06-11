@@ -27,4 +27,10 @@ public class Edge
 {
     public Node Target { get; set; }
     public int Kilometer { get; set; }
+    
+    public Edge(Node target, int kilometer)
+    {
+        Target = target;
+        Kilometer = kilometer;
+    }
 }
