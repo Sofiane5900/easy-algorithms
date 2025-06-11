@@ -12,12 +12,16 @@ public class Graph
 
 public class Node
 {
-    public string Name; 
+    public string Name;
+
+    public int Km; 
     public List<Node> Neighbors { get; set; }
 
-    public Node(string name)
+    public Node(string name, int km)
     {
+        
         Name = name;
+        Km = km;
         Neighbors = new List<Node>();
     }
 }
