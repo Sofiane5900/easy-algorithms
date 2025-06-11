@@ -13,15 +13,18 @@ public class Graph
 public class Node
 {
     public string Name;
-
-    public int Km; 
-    public List<Node> Neighbors { get; set; }
+    public List<Edge> Neighbors { get; set; }
 
     public Node(string name, int km)
     {
         
         Name = name;
-        Km = km;
-        Neighbors = new List<Node>();
+        Neighbors = new List<Edge>();
     }
+}
+
+public class Edge
+{
+    public Node Target { get; set; }
+    public int Kilometer { get; set; }
 }
